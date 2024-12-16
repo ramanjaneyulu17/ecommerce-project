@@ -26,8 +26,8 @@ public class Product {
     private BigDecimal price;
     private String category;
     private Date releaseDate;
-    private boolean availability;
-    private int quantity;
+    private boolean productAvailable;
+    private int stockQuantity;
 
     private String imageName;
     private String imageType;
@@ -116,36 +116,24 @@ public class Product {
         this.category = category;
     }
 
-    public boolean isAvailability() {
-        return availability;
+    public boolean isProductAvailable() {
+        return productAvailable;
     }
 
-    public void setAvailability(boolean availability) {
-        this.availability = availability;
+    public void setProductAvailable(boolean productAvailable) {
+        this.productAvailable = productAvailable;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getStockQuantity() {
+        return stockQuantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setStockQuantity(int stockQuantity) {
+        this.stockQuantity = stockQuantity;
     }
 
-//    public Product(int id, String name, String description, String brand, BigDecimal price, String category, Date releaseDate, boolean availability, int quantity) {
-//        this.id = id;
-//        this.name = name;
-//        this.description = description;
-//        this.brand = brand;
-//        this.price = price;
-//        this.category = category;
-//        this.releaseDate = releaseDate;
-//        this.availability = availability;
-//        this.quantity = quantity;
-//    }
 
-
-    public Product(int id, String name, String description, String brand, BigDecimal price, String category, Date releaseDate, boolean availability, int quantity, String imageName, String imageType, byte[] imageDate) {
+    public Product(int id, String name, String description, String brand, BigDecimal price, String category, Date releaseDate, boolean productAvailable, int stockQuantity, String imageName, String imageType, byte[] imageDate) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -153,8 +141,8 @@ public class Product {
         this.price = price;
         this.category = category;
         this.releaseDate = releaseDate;
-        this.availability = availability;
-        this.quantity = quantity;
+        this.productAvailable = productAvailable;
+        this.stockQuantity = stockQuantity;
         this.imageName = imageName;
         this.imageType = imageType;
         this.imageDate = imageDate;
